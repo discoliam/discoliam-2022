@@ -1,0 +1,36 @@
+[
+  {
+    "name": "Twitter",
+    "url": "https://twitter.com/discoliam/",
+    "target": "_blank"
+  },
+  {
+    "name": "Instagram",
+    "url": "https://www.instagram.com/discoliam/",
+    "target": "_blank"
+  },
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/liamrichardson/",
+    "target": "_blank"
+  },
+  {
+    "name": "Polywork",
+    "url": "https://www.polywork.com/discoliam",
+    "target": "_blank"
+  },
+  {
+    "name": "Github",
+    "url": "https://github.com/discoliam/",
+    "target": "_blank"
+  },
+  {
+    "name": "CodePen",
+    "url": "https://codepen.io/discoliam/",
+    "target": "_blank"
+  },
+  {
+    "name": "Email",
+    "url": "mailto:hello@discoliam.com"
+  }
+]

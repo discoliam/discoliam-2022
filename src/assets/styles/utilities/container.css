@@ -1,0 +1,19 @@
+.Container {
+  width: calc(100% - var(--grid-gap) - var(--grid-gap));
+  display: block;
+  margin-left: var(--grid-gap);
+  margin-right: var(--grid-gap);
+
+  @media (--mq-landscape-tablet-and-up) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 1144px;
+  }
+}
+
+.Container--narrow {
+  @media (--mq-landscape-tablet-and-up) {
+    max-width: 680px;
+  }
+}

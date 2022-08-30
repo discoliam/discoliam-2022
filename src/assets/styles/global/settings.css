@@ -1,0 +1,84 @@
+:root {
+  /* colo(u)rs */
+  --rgb-white: 245, 244, 243;
+  --color-white: rgb(var(--rgb-white));
+
+  --rgb-black: 28, 27, 25;
+  --color-black: rgb(var(--rgb-black));
+
+  --rgb-blue: 65, 133, 185;
+  --color-blue: rgb(var(--rgb-blue));
+
+  --rgb-dark-blue: 52, 66, 88;
+  /* --rgb-dark-blue: 12, 72, 88; */
+  --color-dark-blue: rgb(var(--rgb-dark-blue));
+
+  --rgb-error-100: 188, 0, 0;
+  --color-error-100: rgb(var(--rgb-error-100));
+  --rgb-error-20: 242, 204, 204;
+  --color-error-20: rgb(var(--rgb-error-20));
+  --rgb-error-10: 248, 230, 230;
+  --color-error-10: rgb(var(--rgb-error-10));
+
+  --rgb-warning-100: 255, 168, 0;
+  --color-warning-100: rgb(var(--rgb-warning-100));
+  --rgb-warning-10: 255, 248, 222;
+  --color-warning-10: rgb(var(--rgb-warning-10));
+
+  --rgb-success-100: 0, 180, 72;
+  --color-success-100: rgb(var(--rgb-success-100));
+  --rgb-success-10: 232, 245, 237;
+  --color-success-10: rgb(var(--rgb-success-10));
+
+  --rgb-shadow: 54, 54, 54;
+  --color-shadow: rgb(var(--rgb-shadow));
+  --color-shadow-30: rgba(var(--rgb-shadow), 0.3);
+  --color-shadow-60: rgba(var(--rgb-shadow), 0.6);
+
+  /* Form Colours */
+  --rgb-form-border: 203, 214, 211;
+  --color-form-border: rgb(var(--rgb-form-border));
+
+  /* fonts */
+  --font-family-sans: 'Nunito Sans', sans-serif;
+  --font-family-logo: 'Volkhov', serif;
+
+  /* shadows */
+  --box-shadow-focus: 0 0 0 1px rgba(var(--rgb-white), 0.5),
+    0 0 0 3px rgba(var(--rgb-ocean-100), 0.75);
+
+  /* Spacing */
+  --grid-gap: 24px;
+
+  --spacing: 20px;
+  --padding: 40px;
+  --padding-large: 80px;
+
+  /* font sizes */
+  /* --px-to-rem: calc((var(--pixels) / 16) * 1rem); */
+
+  --font-size--h1: calc((54 / 16) * 1rem); /* 56px */
+  --font-size--h2: calc((40 / 16) * 1rem); /* 32px */
+  --font-size--h3: calc((32 / 16) * 1rem); /* 26px */
+  --font-size--h4: calc((26 / 16) * 1rem); /* 23px */
+  --font-size--h5: calc((23 / 16) * 1rem); /* 22px */
+  --font-size--h6: calc((16 / 16) * 1rem); /* 16px */
+  --font-size--base: calc((16 / 16) * 1rem); /* 16px */
+  --font-size--lead: calc((20 / 16) * 1rem); /* 16px */
+
+  /* Transitions */
+  --global-transition: 150ms ease-in-out;
+}
+
+@media (--mq-tablet-and-up) {
+  :root {
+    --font-size--h1: calc((64 / 16) * 1rem); /* 56px */
+    --font-size--h2: calc((56 / 16) * 1rem); /* 40px */
+    --font-size--h3: calc((40 / 16) * 1rem); /* 32px */
+    --font-size--h4: calc((32 / 16) * 1rem); /* 26px */
+    --font-size--h5: calc((26 / 16) * 1rem); /* 21px */
+    --font-size--h6: calc((21 / 16) * 1rem); /* 18px */
+    --font-size--base: calc((18 / 16) * 1rem); /* 18px */
+    --font-size--lead: calc((24 / 16) * 1rem); /* 16px */
+  }
+}

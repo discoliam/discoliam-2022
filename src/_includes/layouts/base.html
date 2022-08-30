@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if description %}{{- description -}}{% else %}{{ site.description }}{% endif %}" />
+    <meta name="generator" content="{{ eleventy.generator }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/style.css">
+
+    <link rel="icon" href="/assets/icons/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/icons/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/icons/favicon/apple-touch-icon.png">
+    <link rel="manifest" href="/assets/icons/favicon/site.webmanifest">
+
+    <meta property="og:title" content="{{site.title}}">
+    <meta property="og:site_name" content="{{site.title}}">
+    <meta property="og:url" content="https://otaku-dev.co.uk/">
+    <meta property="og:description" content="{{site.description}}">
+    <meta property="og:type" content=website>
+    <meta property="og:image" content="https://otaku-dev.co.uk/assets/icons/favicon/og.png">
+
+    <meta name="twitter:site" content="@SofaRacing" />
+    <meta name="twitter:title" content="{{site.title}}" />
+    <meta name="twitter:description" content="{{site.description}}" />
+    <meta name="twitter:image" content="https://otaku-dev.co.uk/assets/icons/favicon/og.png" />
+
+  </head>
+  <body>
+    {% include "header.njk" %}
+    {% block content %}
+    {% endblock %}
+    {% include "footer.njk" %}
+    <script src="/assets/main.js"></script>
+  </body>
+</html>

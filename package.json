@@ -1,0 +1,43 @@
+{
+  "name": "discoliam-2022",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "cross-env NODE_ENV=development BROWSERSLIST_ENV=development BROWSERSLIST_CONFIG=./.browserslistrc npm-run-all -l clean --parallel dev:*",
+    "dev:webpack": "webpack --config webpack.js --watch",
+    "dev:eleventy": "npx @11ty/eleventy --serve",
+    "build": "cross-env NODE_ENV=production BROWSERSLIST_ENV=production BROWSERSLIST_CONFIG=./.browserslistrc npm-run-all -l clean build:*",
+    "build:webpack": "webpack --config webpack.js --progress",
+    "build:elventy": "eleventy",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "css-minimizer-webpack-plugin": "^4.0.0",
+    "file-loader": "^6.2.0",
+    "mini-css-extract-plugin": "^2.6.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.1",
+    "postcss-custom-media": "^8.0.2",
+    "postcss-import": "^14.1.0",
+    "postcss-loader": "^4.1.0",
+    "postcss-preset-env": "^7.7.1",
+    "prettier": "^2.2.1",
+    "url-loader": "^4.1.1",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^2.0.1"
+  }
+}
