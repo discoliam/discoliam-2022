@@ -1,0 +1,42 @@
+---
+layout: 'layouts/full-width.html'
+title: Portfolio | Discoliam
+pageTitle: Portfolio
+description: Selected works
+tags: header
+eleventyNavigation:
+  key: Portfolio
+  order: 2
+---
+
+<div class="Container">
+  <h1>Portfolio</h1>
+  <p class="Lead">Here's a selection of my work from the past few years. There's a mix of freelance projects and work from full-time roles. I've tried to link to anything that is still online, but contrary to most twitter controversies, the internet sometimes forgets.</p>
+  <ul class="Portfolio__Nav PortfolioNav">
+    {% for entry in portfolio %}
+      {% assign entrySlug = entry.name  | slugify %}
+      <li class="PortfolioNav__Item">
+
+        <div class="PortfolioNav__Image">
+          {% capture bgImage %}./src/assets/images/bg-{{entrySlug}}.jpg{% endcapture %}
+          {% image bgImage, "" %}
+          {% svg entrySlug %}
+        </div>
+
+          <div class="PortfolioNav__Content">
+            <h2 class="h3">{{entry.name}}</h2>
+            <p class="PortfolioNav__Client">
+              <strong>Client:</strong> {{entry.client}}
+            </p>
+            <ul class="PortfolioNav__Tags">
+              {% for tag in entry.tags %}
+                <li class="Label">{{tag}}</li>
+              {% endfor %}
+            </ul>
+            <p>{{entry.excerpt}}</p>
+          </div>
+        <a class="Button PortfolioNav__Link" href="/portfolio/{{entrySlug}}">View case study</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

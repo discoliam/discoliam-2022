@@ -1,8 +1,8 @@
 .Container {
-  width: calc(100% - var(--grid-gap) - var(--grid-gap));
+  width: calc(100% - var(--gap) - var(--gap));
   display: block;
-  margin-left: var(--grid-gap);
-  margin-right: var(--grid-gap);
+  margin-left: var(--gap);
+  margin-right: var(--gap);
 
   @media (--mq-landscape-tablet-and-up) {
     margin-left: auto;

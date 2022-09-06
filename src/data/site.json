@@ -2,11 +2,5 @@
   "name": "Discoliam",
   "title": "Discoliam",
   "description": "Discoliam provides Mobile Development & Consultancy for Start-Ups, Scale-Ups and Internationally Used Products.",
-  "email": "hello@otaku.dev",
-  "phone": "+447971925149",
-  "phone_stylised": "+44 (0) 7971925149",
-  "streetAddress": " The Mews<br />Hounds Road",
-  "addressLocality": "Chipping Sodbury",
-  "addressRegion": "Gloucestershire",
-  "postalCode": "BS37 6EE"
+  "email": "hello@discoliam.dev"
 }

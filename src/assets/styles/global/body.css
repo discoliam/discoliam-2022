@@ -12,13 +12,8 @@ html {
 }
 
 body {
-  font-family: var(--font-family-sans);
-  background-color: var(--color-white);
-  /* background-image: url('../images/bg.jpg'); */
-  /* background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; */
-  color: var(--color-black);
+  font-family: var(--font-family-body);
+  background-color: var(--color-light);
+  color: var(--color-dark);
   margin: 0;
 }

@@ -1,0 +1,136 @@
+.Header {
+  margin-bottom: var(--spacing);
+}
+
+.Header__Site-Title {
+  color: var(--color-alt);
+  display: block;
+  & svg {
+    width: 200px;
+    height: auto;
+  }
+}
+
+/* Main Nav */
+.Header__Nav {
+  background-color: var(--main);
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 50px 24px;
+  text-align: right;
+  transition: transform var(--global-transition);
+  z-index: 5;
+  transform: translateX(100%);
+  padding-top: 120px;
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  & ul {
+    text-transform: uppercase;
+    font-family: var(--font-body);
+    list-style-type: none;
+    margin: 0;
+    & li {
+      margin: 0 0 10px 0;
+      padding: 0;
+    }
+  }
+
+  & a {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1.17px;
+    display: block;
+    color: var(--color-alt);
+    &:hover {
+      color: var(--color-secondary);
+    }
+  }
+
+  @media (--mq-tablet-and-up) {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 50%;
+    display: block;
+    transform: translateX(0);
+    background-color: transparent;
+    padding: 0;
+    height: auto;
+
+    & ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      & li {
+        margin-left: 16px;
+      }
+    }
+
+    & a {
+      font-size: 14px;
+      &:hover {
+        color: var(--main);
+      }
+    }
+  }
+}
+
+/* Toggles */
+.Header__NavToggle,
+.Header__ThemeToggle {
+  position: absolute;
+  top: 24px;
+  cursor: pointer;
+  border: 0;
+}
+
+/* Menu Toggle */
+.Header__NavToggle {
+  z-index: 10;
+  right: 24px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 1.17px;
+  color: var(--alt);
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  padding: 0;
+  margin: 0;
+  @media (--mq-tablet-and-up) {
+    display: none;
+  }
+}
+
+/* Theme Toggle */
+.Header__ThemeToggle {
+  left: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    transition: transform 300ms linear;
+    border-radius: 50%;
+    transform: translate(-100%, -100%);
+    transform-orgin: 100% 100%;
+  }
+  &[data-theme='dark'] {
+    background-color: var(--main);
+    &::after {
+      transform: translate(-25%, -25%);
+    }
+  }
+}

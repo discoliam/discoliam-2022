@@ -1,0 +1,10 @@
+{% layout 'layouts/base.html' %}
+
+{% block content %}
+  <div class="Page Page--centered" id="main-content">
+    <div class="Container">
+      <h1>{{pageTitle}}</h1>
+      {{- content -}}
+    </div>
+  </div>
+{% endblock %}

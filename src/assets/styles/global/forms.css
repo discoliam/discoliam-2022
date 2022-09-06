@@ -1,13 +1,5 @@
 /* Label */
 label {
-  display: block;
-  font-family: var(--font-family-sans);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  display: block;
-  margin-bottom: 5px;
-  color: var(--color-dark-blue);
 }
 
 /* Input Types */
@@ -25,81 +17,14 @@ input[type='time'],
 input[type='url'],
 input[type='week'],
 textarea {
-  font-family: var(--font-family-sans);
-  color: var(--color-black);
-  background-color: transparent;
-  border: 0;
-  border-bottom: solid 1px var(--color-blue);
-  border-radius: 0;
-  padding: 0 0 10px 0;
-  transition: all 80ms ease;
-  width: 100%;
-  font-size: var(--font-size-base);
-
   /* Focus Styles - uses outline for A11y */
   &:focus-visible {
-    outline: 0;
   }
 
   &:disabled {
-    opacity: 0.75;
+    opacity: 0.5;
     cursor: not-allowed;
-    background-color: var(--color-white);
-    border-color: rgba(var(--color-blue), 0.5);
-    color: var(--color-black);
   }
-
-  /* Errors */
-  &.Input--inline-error {
-    border-color: var(--color-error-100);
-
-    &:hover,
-    &:focus {
-      border-color: var(--color-error-100);
-      outline-color: var(--color-error-100);
-    }
-  }
-}
-
-/* Select Specific */
-select {
-  font-family: var(--font-family-sans);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height--base);
-  color: var(--color-black);
-  background-color: var(--color-white);
-  border: solid 1px var(--color-form-border);
-  border-radius: 0;
-  padding: 7px 22px 7px 12px;
-  max-width: 100%;
-  margin: 0;
-  appearance: none;
-  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAMCAYAAABiDJ37AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADASURBVHgBndPBDcIgFAbg/5UBTK9q1SGqh8ZDR3AENylu0A1cRRO96MUV2sae6wIi1GiwoQX8E5IH5H2BEACZRbLcqoE/o/czVQjCHoTNKJriUd2PflicCaJc9YfRpAj0TSLBZ8kq88S4vsaaqr6F8zFJLn2jSF1O2sVkvSvO15ypSVPWBx/UhJWnSztnn0VXdAj7AV1QG9b2wHSldcyFoO/jyJoHeMKG9YImVE8fpsLQk+71XbBB0ITaMOf4fM0XfOR3uCloYw4AAAAASUVORK5CYII=');
-  background-repeat: no-repeat;
-  background-position: right 12px top 50%;
-  background-size: 8px auto;
-  transition: all var(--global-transition);
-
-  /* Focus Styles - uses outline for A11y */
-  &:focus-visible {
-    outline: solid 2px var(--color-blue);
-  }
-
-  &:disabled {
-    opacity: 0.75;
-    cursor: not-allowed;
-    background-color: var(--color-white);
-    border-color: rgba(var(--color-blue), 0.5);
-    color: var(--color-black);
-  }
-}
-
-select::-ms-expand {
-  display: none;
-}
-
-select option {
-  font-weight: normal;
 }
 
 /* Accent Colour for form elements */
@@ -107,11 +32,5 @@ input[type='checkbox'],
 input[type='radio'],
 input[type='range'],
 progress {
-  accent-color: var(--color-blue);
-}
-
-/* Fieldset */
-fieldset {
-  border: solid 2px var(--color-black);
-  border-radius: 0;
+  accent-color: var(--color-main);
 }

@@ -1,0 +1,13 @@
+.Label {
+  display: inline-flex;
+  border-radius: 9999em;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 1rem;
+  font-size: var(--font-size--base);
+  line-height: 1;
+  background-color: var(--color-main);
+  color: var(--color-light);
+  font-size: 12px;
+  padding: 6px 14px 6px 12px;
+}

@@ -10,13 +10,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,700;1,400&family=Volkhov:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="/assets/style.css">
 
-    <link rel="icon" href="/assets/icons/favicon/favicon.ico" sizes="any">
-    <link rel="icon" href="/assets/icons/favicon/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/assets/icons/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/assets/icons/favicon/site.webmanifest">
+    <link rel="stylesheet" href="https://unpkg.com/dracula-prism/dist/css/dracula-prism.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
     <meta property="og:title" content="{{site.title}}">
     <meta property="og:site_name" content="{{site.title}}">
@@ -32,10 +35,13 @@
 
   </head>
   <body>
-    {% include "header.njk" %}
+    <a href="#main-content" class="Button sr-only">Skip to main content</a>
+    {% svgsprite %}
+    {% include "header.liquid" %}
     {% block content %}
     {% endblock %}
-    {% include "footer.njk" %}
+    {% include "footer.liquid" %}
     <script src="/assets/main.js"></script>
+    <script src="https://unpkg.com/website-carbon-badges@1.1.3/b.min.js" async defer></script>
   </body>
 </html>

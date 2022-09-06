@@ -1,0 +1,53 @@
+.PortfolioNav,
+.PortfolioNav__Tags {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.PortfolioNav {
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: 1fr;
+  @media (--mq-tablet-and-up) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.PortfolioNav__Item {
+  padding: 0;
+  margin: 0;
+}
+
+.PortfolioNav__Image {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  margin-bottom: var(--gap);
+}
+
+.PortfolioNav__Image img {
+  width: 100%;
+  height: auto;
+}
+
+.PortfolioNav__Image svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  width: 50%;
+  height: auto;
+}
+
+.PortfolioNav__Tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1em;
+}
+
+.PortfolioNav__Tags .Label {
+  margin-right: 5px;
+}

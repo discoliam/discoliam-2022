@@ -41,10 +41,11 @@ h6,
 .h4,
 .h5,
 .h6 {
-  line-height: 1.2;
-  font-family: var(--font-family-logo);
-  font-weight: 400;
-  color: var(--color-dark-blue);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+  letter-spacing: 0.33px;
+  line-height: 0.98;
+  color: var(--color-main);
   margin: 0 0 0.2em 0;
   & b,
   & strong {
@@ -52,20 +53,20 @@ h6,
   }
 }
 
-h1,
-.h1 {
-  color: var(--color-blue);
-  & b,
-  & strong {
-    color: var(--color-dark-blue);
-  }
+.Subtitle {
+  font-family: var(--font-regular);
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 1em;
 }
 
 /* Links */
 a {
-  color: var(--color-blue);
+  color: var(--color-main);
   text-decoration: none;
-  transition: color var(--global-transition);
+  transition: all var(--global-transition);
 }
 
 a:hover,
@@ -107,6 +108,7 @@ dd + dt {
 /* first child spacing fix */
 p,
 ul,
-ol {
-  margin: 0 0 0.5em 0;
+ol,
+nav {
+  margin: 0 0 1em 0;
 }

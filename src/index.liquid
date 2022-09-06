@@ -1,0 +1,57 @@
+---
+title: 'Discoliam'
+description: 'Discoliam provides Mobile Development &amp; Consultancy for Start-Ups, Scale-Ups and Internationally Used Products.'
+layout: 'layouts/full-width.html'
+tags: header
+eleventyNavigation:
+  key: Home
+  order: 1
+---
+
+<div class="Container">
+
+<div class="Introduction">
+  <h1 class="sr-only ">Discoliam</h1>
+  {% image "./src/assets/images/photo.jpg", "Photograph of Liam Richardson", "Introduction__Image"  %}
+  <p>Hi, I'm Liam. Or, thanks to a misguided choice of nickname one summer when I was 12 years old, <strong>Discoliam</strong>.</p>
+  <p>I'm a User Interface Developer 🤓 currently based in Bristol, UK 🇬🇧. For 14 years I've built award-winning <strong>Websites</strong>, <strong>Design Systems</strong>, and <strong>Installations</strong> for clients around the globe 🌎.</p>
+</div>
+
+<div class="Services">
+  <h2>Services</h2>
+  <p>As a developer, I like to use technology to help as best I can. I focus on Performance, Accessability and the envriomental impact of digital products. I can help you with:</p>
+  <ul class="Services">
+    <li class="Services__Item">UX Design & Digital Stratergy</li>
+    <li class="Services__Item">Technical Planing / Architecture</li>
+    <li class="Services__Item">Web Development</li>
+    <li class="Services__Item">Performance & Accesability Consultancy</li>
+  </ul>
+  <a href="/services" class="Button">Find out more about my services</a>
+</div>
+
+
+
+<div class="Projects">
+  <h2>Potted History of Projects & Clients</h2>
+
+  <ul class="Projects__List">
+    {% for project in index.projects %}
+      <li class="Projects__Item">
+        {% assign svg_name = project | slugify %}
+        {% svg svg_name %}
+        <span class="sr-only">{{ project }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <a href="/services" class="Button">View my Portfolio</a>
+
+</div>
+
+
+
+
+
+</div>
+
+
