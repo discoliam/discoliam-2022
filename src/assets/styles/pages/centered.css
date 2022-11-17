@@ -1,0 +1,15 @@
+.Page--centered img {
+  border-radius: var(--border-radius);
+}
+
+@media (--mq-tablet-and-up) {
+  .Page--centered > .Container {
+    display: grid;
+    column-gap: var(--gap);
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .Page--centered .ContentWrapper {
+    grid-column: 3 / span 8;
+  }
+}

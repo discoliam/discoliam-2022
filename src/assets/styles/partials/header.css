@@ -9,6 +9,9 @@
     width: 200px;
     height: auto;
   }
+  &::after {
+    display: none;
+  }
 }
 
 /* Main Nav */
@@ -42,12 +45,17 @@
 
   & a {
     font-size: 24px;
-    font-weight: 600;
+    font-family: var(--font-family-heading);
+    font-weight: 700;
     letter-spacing: 1.17px;
     display: block;
     color: var(--color-alt);
+
     &:hover {
       color: var(--color-secondary);
+    }
+    &::after {
+      display: none;
     }
   }
 
@@ -108,7 +116,7 @@
 }
 
 /* Theme Toggle */
-.Header__ThemeToggle {
+/* .Header__ThemeToggle {
   left: 24px;
   width: 24px;
   height: 24px;
@@ -133,4 +141,4 @@
       transform: translate(-25%, -25%);
     }
   }
-}
+} */

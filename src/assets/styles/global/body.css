@@ -16,4 +16,5 @@ body {
   background-color: var(--color-light);
   color: var(--color-dark);
   margin: 0;
+  font-weight: 300;
 }

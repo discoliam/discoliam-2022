@@ -13,18 +13,17 @@ eleventyNavigation:
   <h1>Portfolio</h1>
   <p class="Lead">Here's a selection of my work from the past few years. There's a mix of freelance projects and work from full-time roles. I've tried to link to anything that is still online, but contrary to most twitter controversies, the internet sometimes forgets.</p>
   <ul class="Portfolio__Nav PortfolioNav">
-    {% for entry in portfolio %}
-      {% assign entrySlug = entry.name  | slugify %}
+  {% assign navPages = collections.all | eleventyNavigation: "Portfolio" %}
+  {%- for entry in navPages %}
+      {% assign entrySlug = entry.title  | slugify %}
       <li class="PortfolioNav__Item">
-
         <div class="PortfolioNav__Image">
           {% capture bgImage %}./src/assets/images/bg-{{entrySlug}}.jpg{% endcapture %}
           {% image bgImage, "" %}
           {% svg entrySlug %}
         </div>
-
           <div class="PortfolioNav__Content">
-            <h2 class="h3">{{entry.name}}</h2>
+            <h2 class="h3">{{entry.title}}</h2>
             <p class="PortfolioNav__Client">
               <strong>Client:</strong> {{entry.client}}
             </p>
@@ -35,7 +34,7 @@ eleventyNavigation:
             </ul>
             <p>{{entry.excerpt}}</p>
           </div>
-        <a class="Button PortfolioNav__Link" href="/portfolio/{{entrySlug}}">View case study</a>
+        <a class="Button PortfolioNav__Link" href="{{entry.url}}">View case study</a>
       </li>
     {% endfor %}
   </ul>

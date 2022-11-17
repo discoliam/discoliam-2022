@@ -1,6 +1,7 @@
 ---
 title: 'Contact | Discoliam'
 description: 'Get in touch about your project.'
+pageTitle: Get in touch
 layout: 'layouts/full-width.html'
 tags: header
 eleventyNavigation:
@@ -9,12 +10,11 @@ eleventyNavigation:
 ---
 
 <div class="Container">
-
-    <h1>{{ contact.page_title }}</h1>
-
-      <p>Give me a bell on the form bellow, or using any of the channels in the footer (even LinkedIn if you <em>really</am> have too...) and I'll get back to you asap.</p>
-
-      <form id="ContactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
+  <h1>{{pageTitle}}</h1>
+  <p>If you've got a project in mind and want to chat more, get in touch and I'll get back to you ASAP. You can use the form below, or any of my social channels, even LinkedIn if you really have too.</p>
+  <div class="Contact__Grid">
+    <div class="Contact__Form">
+      <form class="Contact__FormTag" id="ContactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true">
         <div class="sr-only">
           <label>
             Don’t fill this out if you’re human: <input name="bot-field" />
@@ -47,8 +47,23 @@ eleventyNavigation:
         <p class="Contact__MessageText Contact__MessageText--success">{{ contact.success }}</p>
         <p class="Contact__MessageText Contact__MessageText--error">{{ contact.error }}</p>
       </div>
-
-
-
-
+    </div>
+    <div class="Contact__Info">
+      <ul class="Contact__List">
+        {% for contact in contacts %}
+          {% assign svg_name = contact.name | slugify %}
+          <li>
+          <span class="Contact__Icon">{% svg svg_name %}</span>
+            <div class="Contact__Item">
+              <span class="Contact__Name h6">{{ contact.name }}</span>
+              <a href="{{contact.url | url}}" {% if contact.target %}target="{{contact.target}}" rel="noopener"{% endif %}>
+                {{ contact.url }}
+                <span class="sr-only">{{contact.name}} {% if contact.target %}- Opens in new Tab{% endif %}</span>
+              </a>
+            </div>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
 </div>

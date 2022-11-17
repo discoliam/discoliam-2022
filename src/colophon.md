@@ -1,6 +1,7 @@
 ---
 layout: 'layouts/centered.html'
-title: Colophon
+title: Colophon | Discoliam
+pageTitle: Colophon
 description: Mostly an excuse to link to other things that helped me make this.
 tags: footer
 eleventyNavigation:
@@ -8,13 +9,11 @@ eleventyNavigation:
   order: 1
 ---
 
-# {{title}}
-
 Originally designed and developed across the globe, this version was re-built September 2022 in Bristol UK, using a combination of blood, sweat, and [Stack Overflow](https://xkcd.com/979/).
 
 Typeset in [Popins](https://github.com/itfoundry/Poppins) by [Indian Type Foundry](https://www.indiantypefoundry.com/), and [Inter](https://rsms.me/inter/) by [Rasmus Andersson](https://rsms.me/).
 
-Orignal design by [Patricia Bernal]( http://patriciabernal.ca/). Re-interpreted by me.
+Orignal design by [Patricia Bernal](http://patriciabernal.ca/). Re-interpreted by me.
 
 ## Build
 

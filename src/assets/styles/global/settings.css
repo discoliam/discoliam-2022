@@ -14,9 +14,9 @@
   --color-alt: var(--pastel-red);
   --color-secondary: var(--macaroni-and-cheese);
 
-  /* fonts */
-  --font-family-body: 'Inter', sans-serif;
-  --font-family-heading: 'Poppins', sans-serif;
+  /* Fonts */
+  --font-family-body: 'Merriweather', sans-serif;
+  --font-family-heading: 'Lato', sans-serif;
 
   /* Spacing */
   --gap: 24px;
@@ -49,7 +49,6 @@
     --font-size--h6: calc((21 / 16) * 1rem); /* 18px */
     --font-size--base: calc((18 / 16) * 1rem); /* 18px */
     --font-size--lead: calc((24 / 16) * 1rem); /* 16px */
-
     --spacing: 60px;
   }
 }

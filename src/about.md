@@ -11,17 +11,17 @@ eleventyNavigation:
 
 I don't really like talking about myself, but, needs must. If you only read one page about who I am and what I do this year, make it this one.
 
-{% image "./src/assets/images/photo.jpg", "Photograph of Liam Richardson" %}
+<div class="About__ImageWrapper">
+  {% image "./src/assets/images/photo.jpg", "Photograph of Liam Richardson" %}
+</div>
 
-## TL;DR
+## tl;dr
 
-I'm a web developer and Technical Lead with 10 years of experience. I'm passionate about Front End Dev, Performance, A11y, Pizza, and shouty music.
-
-<div class="img-wrapper"><img src="/assets/photo.jpg" alt="Liam Richardson"></div>
+I'm a web developer and Technical Lead with over 12 years of experience. I'm passionate about Front End Dev, Performance, A11y, Pizza, and shouty music.
 
 ## Not long Enough
 
-For about 10 years or so I've been building Websites, Applications, Digital Installations, and some other random bits in-between. This has been about a 50/50 split between full time at agencies, and as a freelancer working for one-person bands, to multi-million dollar startups and everyone in-between.
+For about 12 years or so I've been building Websites, Applications, Digital Installations, and some other random bits in-between. This has been about a 50/50 split between full time at agencies, and as a freelancer working for one-person bands, to multi-million dollar startups and everyone in-between.
 
 Over the years I've done a little bit of everything, but these days I've found myself working on modular-based websites, design systems, or startups. Most of my work over the last year or so has been based on Wordpress or Fractal, and a mix of different Static Site Generators.
 
@@ -29,7 +29,7 @@ I've played an active part in all stages of the project lifecycle. Working close
 
 ## Where in the world
 
-I'm currently living in <del>sunny</del> rainy [Bristol, UK](https://en.wikipedia.org/wiki/Bristol), after spending just under 4 years in [Vancouver, BC](https://en.wikipedia.org/wiki/Vancouver). I grew up in the town of [Fleet](https://en.wikipedia.org/wiki/Fleet,_Hampshire), went to [university](https://www.uwe.ac.uk/) in Bristol and have give or take been based there ever since.
+I'm currently living in <del>sunny</del> rainy [Bristol, UK](https://en.wikipedia.org/wiki/Bristol), after spending just under 4 years in <del>sunny</del> rainy [Vancouver, BC](https://en.wikipedia.org/wiki/Vancouver). I grew up in the town of [Fleet](https://en.wikipedia.org/wiki/Fleet,_Hampshire), went to [university](https://www.uwe.ac.uk/) in Bristol and somehow always end up back here.
 
 I've also worked in Europe, Australia, and the United States for some shorter stints of time over the years.
 

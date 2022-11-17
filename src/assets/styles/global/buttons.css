@@ -2,8 +2,9 @@
   border-radius: var(--border-radius);
   border: solid 2px var(--color-alt);
   font-size: 0.75rem; /* 12px */
-  font-weight: 600;
-  letter-spacing: 0.0625rem; /* 1px */
+  font-weight: 700;
+  font-family: var(--font-family-heading);
+  letter-spacing: 0.05em;
   background-color: transparent;
   color: var(--color-alt);
   line-height: 1.4375rem;
@@ -27,5 +28,8 @@
     box-shadow: inset 0px -59px 0px 0px var(--color-alt);
     color: var(--color-light);
     text-decoration: none;
+  }
+  &::after {
+    display: none;
   }
 }

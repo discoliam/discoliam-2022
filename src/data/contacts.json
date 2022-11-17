@@ -2,35 +2,42 @@
   {
     "name": "Twitter",
     "url": "https://twitter.com/discoliam/",
-    "target": "_blank"
+    "target": "_blank",
+    "emoji": "🐦"
   },
   {
     "name": "Instagram",
     "url": "https://www.instagram.com/discoliam/",
-    "target": "_blank"
+    "target": "_blank",
+    "emoji": "📷"
   },
   {
     "name": "LinkedIn",
     "url": "https://www.linkedin.com/in/liamrichardson/",
-    "target": "_blank"
+    "target": "_blank",
+    "emoji": "📈"
   },
   {
     "name": "Polywork",
     "url": "https://www.polywork.com/discoliam",
-    "target": "_blank"
+    "target": "_blank",
+    "emoji": "💼"
   },
   {
     "name": "Github",
     "url": "https://github.com/discoliam/",
-    "target": "_blank"
+    "target": "_blank",
+    "emoji": "🗂"
   },
   {
     "name": "CodePen",
     "url": "https://codepen.io/discoliam/",
-    "target": "_blank"
+    "target": "_blank",
+    "emoji": "👨‍💻"
   },
   {
     "name": "Email",
-    "url": "mailto:hello@discoliam.com"
+    "url": "mailto:hello@discoliam.com",
+    "emoji": "📧"
   }
 ]

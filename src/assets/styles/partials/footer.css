@@ -8,8 +8,12 @@
   }
   & a {
     color: var(--white);
+    font-weight: 400;
     &:hover {
       color: var(--secondary);
+    }
+    &::after {
+      display: none;
     }
   }
 }
