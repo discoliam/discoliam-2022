@@ -11,24 +11,15 @@
   list-style-type: none;
   & li {
     margin-bottom: 2em;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
   }
+}
 
-  & li a {
-    color: var(--color-main);
-    opacity: 0.8;
-    font-style: italic;
-    font-size: 14px;
-    font-weight: 300;
-    &::after {
-      display: none;
-    }
-    &:hover {
-      text-decoration: underline;
-      text-decoration-color: var(--color-alt);
-    }
+.Contact__Link {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  &::after {
+    display: none;
   }
 }
 
@@ -53,4 +44,17 @@
   display: block;
   color: var(--color-main);
   margin: 0 0 0.2em 0;
+}
+
+.Contact__Url {
+  color: var(--color-main);
+  opacity: 0.8;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.Contact__Link:hover .Contact__Url {
+  text-decoration: underline;
+  text-decoration-color: var(--color-alt);
 }

@@ -43,8 +43,7 @@ h6,
 .h6 {
   font-family: var(--font-family-heading);
   font-weight: 900;
-  line-height: 0.98;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   color: var(--color-main);
   margin: 0.5em 0 0.5em 0;
   &:first-child {
@@ -55,7 +54,7 @@ h6,
 .Subtitle {
   font-family: var(--font-family-heading);
   font-size: 14px;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.01em;
   line-height: normal;
   text-transform: uppercase;
   margin-bottom: 1em;
@@ -120,8 +119,14 @@ ol {
 
 li {
   margin-left: 0;
+  margin-bottom: 0.7em;
   padding-left: 0;
   line-height: var(--line-height--base);
+}
+
+::marker {
+  color: var(--color-alt);
+  font-size: var(--font-size--lead);
 }
 
 /* Definition Lists */
@@ -150,4 +155,15 @@ nav {
 b,
 strong {
   font-weight: 700;
+}
+
+/* Lead */
+.Lead {
+  font-size: var(--font-size--lead);
+}
+
+.Heading {
+  font-family: var(--font-family-heading);
+  font-weight: 900;
+  letter-spacing: 0.01em;
 }

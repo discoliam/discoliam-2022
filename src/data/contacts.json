@@ -1,5 +1,10 @@
 [
   {
+    "name": "Email",
+    "url": "hello@discoliam.com",
+    "emoji": "📧"
+  },
+  {
     "name": "Twitter",
     "url": "https://twitter.com/discoliam/",
     "target": "_blank",
@@ -36,8 +41,10 @@
     "emoji": "👨‍💻"
   },
   {
-    "name": "Email",
-    "url": "mailto:hello@discoliam.com",
-    "emoji": "📧"
+    "name": "Mastodon",
+    "url": "https://mastodon.social/@Discoliam",
+    "target": "_blank",
+    "rel": "me",
+    "emoji": "🐘"
   }
 ]

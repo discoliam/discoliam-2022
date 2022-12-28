@@ -15,6 +15,7 @@
 /* Partials */
 @import 'partials/header.css';
 @import 'partials/footer.css';
+@import 'partials/page-header.css';
 @import 'partials/labels.css';
 
 /* Pages */

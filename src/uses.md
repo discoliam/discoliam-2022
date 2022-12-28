@@ -9,7 +9,7 @@ eleventyNavigation:
   order: 5
 ---
 
-Inspired by [Wes Bos](https://wesbos.com/uses/) (as I found his resource very useful) this is a quick rundown of the things I use day to day for work / general messing around.
+<p class="Lead">Inspired by  <a href="https://wesbos.com/uses/" target="_blank">Wes Bos</a> (as I found his resource very useful) this is a quick rundown of the things I use day to day for work / general messing around.</p>
 
 ## Editor + Terminal
 
@@ -43,7 +43,7 @@ For input, I'm using the combo of a [Logitech MX Master 3](https://www.logitech.
 
 During the winter of 2021/22, I decided to build a desk. The wood and hairpin legs were purchased from [Leeds Wood Recycling](https://www.leedswoodrecycling.co.uk/) and I then spent about 20 hours sanding off the oil and concrete on them. It's pretty wonky, has a definite curve to it, but I'm super happy with how it came out. I'm planning on building another one that will hopefully be a bit flatter.
 
-To protect my handy work I'm using a [Dotgrid Black deskmat](https://www.dotgrid.co/products/vegan-leather-desk-mat-black), mostly as it had a good review from (David Darnes)[https://setups.co/posts/david-darnes].
+To protect my handy work I'm using a [Dotgrid Black deskmat](https://www.dotgrid.co/products/vegan-leather-desk-mat-black), mostly as it had a good review from [David Darnes](https://setups.co/posts/david-darnes).
 
 ## Audio
 

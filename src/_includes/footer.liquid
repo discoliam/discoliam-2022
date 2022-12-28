@@ -8,7 +8,7 @@
       <p>Give me a bell on any of the channels bellow (even LinkedIn if you really have too...) and I'll get back to you asap.</p>
       <nav class="SocialNav">
         {% for contact in contacts %}
-          <a href="{{contact.url | url}}" {% if contact.target %}target="{{contact.target}}" rel="noopener"{% endif %}>
+          <a href="{{protocol}}{{contact.url | url}}" rel="{% if contact.rel %}{{contact.rel}}{% endif %} {% if contact.target %}noopener{% endif %}" {% if contact.target %}target="{{contact.target}}" rel="noopener"{% endif %} >
             {% assign svg_name = contact.name | slugify %}
             {% svg svg_name %}
             <span class="sr-only">{{contact.name}} {% if contact.target %}- Opens in new Tab{% endif %}</span>

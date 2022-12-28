@@ -10,8 +10,13 @@ eleventyNavigation:
 ---
 
 <div class="Container">
-  <h1>Portfolio</h1>
-  <p class="Lead">Here's a selection of my work from the past few years. There's a mix of freelance projects and work from full-time roles. I've tried to link to anything that is still online, but contrary to most twitter controversies, the internet sometimes forgets.</p>
+  <div class="Page__Header">
+    <div>
+      <h1>Portfolio</h1>
+      <p class="Lead">Here's a selection of my work from the past few years. There's a mix of freelance projects and work from full-time roles. I've tried to link to anything that is still online, but contrary to most twitter controversies, the internet sometimes forgets.</p>
+    </div>
+  </div>
+
   <ul class="Portfolio__Nav PortfolioNav">
   {% assign navPages = collections.all | eleventyNavigation: "Portfolio" %}
   {%- for entry in navPages %}

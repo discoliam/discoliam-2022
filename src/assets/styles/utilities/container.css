@@ -3,6 +3,7 @@
   display: block;
   margin-left: var(--gap);
   margin-right: var(--gap);
+  position: relative;
 
   @media (--mq-landscape-tablet-and-up) {
     margin-left: auto;

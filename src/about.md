@@ -17,11 +17,11 @@ I don't really like talking about myself, but, needs must. If you only read one 
 
 ## tl;dr
 
-I'm a web developer and Technical Lead with over 12 years of experience. I'm passionate about Front End Dev, Performance, A11y, Pizza, and shouty music.
+I'm a web developer and Technical Lead with over 14 years of experience. I'm passionate about Front End Dev, Performance, A11y, Pizza, and shouty music.
 
 ## Not long Enough
 
-For about 12 years or so I've been building Websites, Applications, Digital Installations, and some other random bits in-between. This has been about a 50/50 split between full time at agencies, and as a freelancer working for one-person bands, to multi-million dollar startups and everyone in-between.
+For about 14 years or so I've been building Websites, Applications, Digital Installations, and some other random bits in-between. This has been about a 50/50 split between full time at agencies, and as a freelancer working for one-person organisations, to multi-million dollar startups and everyone in-between.
 
 Over the years I've done a little bit of everything, but these days I've found myself working on modular-based websites, design systems, or startups. Most of my work over the last year or so has been based on Wordpress or Fractal, and a mix of different Static Site Generators.
 
