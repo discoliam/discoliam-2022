@@ -2,6 +2,8 @@ const Image = require('@11ty/eleventy-img')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const svgSprite = require('eleventy-plugin-svg-sprite')
+const markdownIt = require('markdown-it')
+const markdownItEleventyImg = require('markdown-it-eleventy-img')
 
 async function imageShortcode(src, alt, className, sizes = '100vw') {
   if (alt === undefined) {
@@ -52,6 +54,14 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy({
     'src/assets/favicon': '/assets/favicon',
   })
+  eleventyConfig.setLibrary(
+    'md',
+    markdownIt({
+      html: true,
+      breaks: true,
+      linkify: true,
+    }).use(markdownItEleventyImg)
+  )
 
   return {
     dir: {

@@ -9,3 +9,15 @@
     }
   }
 }
+
+.Page__Header--centered {
+  text-align: center;
+  & h1 {
+    margin-bottom: 0;
+  }
+  @media (--mq-tablet-and-up) {
+    & div {
+      grid-column: 3 / span 8;
+    }
+  }
+}

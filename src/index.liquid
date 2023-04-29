@@ -23,7 +23,7 @@ eleventyNavigation:
     <div class="Services__Grid">
       <h2 class="Services__Title">Services</h2>
       <div class="Services__Text">
-        <p class="Lead ">As a developer, I like to use technology to help as best I can. I focus on Performance, Accessability and the envriomental impact of digital products. I can help you with:</p>
+        <p class="Lead ">As a developer, I like to use technology to help as best I can. I focus on <strong>performance</strong>, <strong>accessability</strong> and the <strong>envriomental impact</strong> of digital products. I can help you with:</p>
       </div>
       <div class="Services__List">
         <ul class="Lead Heading">
@@ -40,9 +40,9 @@ eleventyNavigation:
 
   <div class="Projects">
     <h2>Potted History of Projects & Clients</h2>
-    <ul class="Projects__List">
+    <ul class="Logo__List">
       {% for project in index.projects %}
-        <li class="Projects__Item">
+        <li class="Logo__Item">
           {% assign svg_name = project | slugify %}
           {% svg svg_name %}
           <span class="sr-only">{{ project }}</span>

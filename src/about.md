@@ -9,7 +9,9 @@ eleventyNavigation:
   order: 4
 ---
 
-I don't really like talking about myself, but, needs must. If you only read one page about who I am and what I do this year, make it this one.
+<p class="Lead">
+  I don't really like talking about myself, but, needs must. If you only read one page about who I am and what I do this year, make it this one.
+</p>
 
 <div class="About__ImageWrapper">
   {% image "./src/assets/images/photo.jpg", "Photograph of Liam Richardson" %}
@@ -17,7 +19,7 @@ I don't really like talking about myself, but, needs must. If you only read one 
 
 ## tl;dr
 
-I'm a web developer and Technical Lead with over 14 years of experience. I'm passionate about Front End Dev, Performance, A11y, Pizza, and shouty music.
+I'm a Web Developer and Technical Lead with over 14 years of experience. I'm passionate about Front End Dev, Performance, A11y, Pizza, and shouty music.
 
 ## Not long Enough
 
@@ -35,7 +37,6 @@ I've also worked in Europe, Australia, and the United States for some shorter st
 
 ## On the World Wide Web
 
-- 🐦 [Twitter](https://twitter.com/discoliam/)
 - 📷 [Instagram](https://www.instagram.com/discoliam/)
 - 📈 [LinkedIn](https://www.linkedin.com/in/liamrichardson/)
 - 💼 [Polywork](https://www.polywork.com/discoliam)

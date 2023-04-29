@@ -25,6 +25,7 @@
   overflow: hidden;
   margin-bottom: var(--gap);
   position: relative;
+  display: block;
   &::before {
     content: '';
     display: block;
@@ -52,13 +53,30 @@
   height: auto;
 }
 
+.PortfolioNav__Content h2 a {
+  text-decoration: none;
+  color: var(--color-main);
+  font-family: var(--font-family-body);
+  &:hover {
+    color: var(--color-alt);
+  }
+  &::after {
+    display: none;
+  }
+}
+
 .PortfolioNav__Tags {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   margin-bottom: 1em;
+  flex-wrap: wrap;
 }
 
 .PortfolioNav__Tags .Label {
   margin-right: 5px;
+}
+
+.Portfolio__Nav {
+  padding-bottom: var(--spacing);
 }

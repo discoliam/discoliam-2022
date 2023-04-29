@@ -17,10 +17,12 @@
 @import 'partials/footer.css';
 @import 'partials/page-header.css';
 @import 'partials/labels.css';
+@import 'partials/content-wrapper.css';
 
 /* Pages */
 @import 'pages/home.css';
 @import 'pages/portfolio.css';
+@import 'pages/portfolio-single.css';
 @import 'pages/about.css';
 @import 'pages/contact.css';
 @import 'pages/centered.css';

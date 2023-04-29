@@ -2,9 +2,10 @@
 label {
   display: block;
   font-family: var(--font-family-heading);
+  font-size: var(--font-size--lead);
   font-weight: 900;
   letter-spacing: 0.01em;
-  margin: 0 0 1em 0;
+  margin: 0 0 0.5em 0;
   color: var(--color-main);
 }
 
@@ -53,7 +54,7 @@ textarea {
 }
 
 .InputWrap {
-  margin-bottom: 1em;
+  margin-bottom: 2em;
 }
 
 /* Accent Colour for form elements */

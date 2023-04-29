@@ -2,9 +2,6 @@
   display: grid;
   gap: var(--gap);
   grid-template-columns: 1fr;
-  @media (--mq-tablet-and-up) {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
 
 .Contact__List {
@@ -57,4 +54,18 @@
 .Contact__Link:hover .Contact__Url {
   text-decoration: underline;
   text-decoration-color: var(--color-alt);
+}
+
+@media (--mq-tablet-and-up) {
+  .Contact__Grid {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .Contact__Form {
+    grid-column: 1 / span 6;
+  }
+
+  .Contact__Info {
+    grid-column: 8 / span 5;
+  }
 }

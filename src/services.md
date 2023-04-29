@@ -15,17 +15,17 @@ eleventyNavigation:
 
 My work involves all types of digital products and services, of which I'm often involved in a variety of stages.
 
-**UX / Strategy**
+### UX / Strategy
 
 I love getting involved in the nitty-gritty of user research, workshops and UX design. I work closely with UI designers and brand managers to turn static assets and ideas into interactive & accessible digital products.
 
-**Development**
+### Development
 
 Be it planning out the Technical architecture of a small website, or parachuting in to add new features to a legacy codebase, I've worked on all sorts of projects. I tend to specialize in front-end development, across a wide range of tech stacks and CMSs.
 
-I try to focus on accessibility, performance and the environmental impact of all my work.
+I try to focus on **_accessibility_**, **_performance_** and the **_environmental impact_** of all my work.
 
-**Consultancy**
+### Consultancy
 
 Clients often just need some help or guidance for their digital presence. Be it performance or accessibility audits and recommendations, technical architecture or a full website review, I love getting stuck into a project, investigating all the nuts and bolts and working out how we can any areas that may need work.
 
@@ -35,12 +35,12 @@ If your team is big, small, or non-existent, I'm happy working with whoever is o
 
 Once we're up and running, I like to choose the best tool for the job, and one that the rest of the team is comfortable with. But generally speaking, I find I'm often:
 
-- Wireframing and prototyping in [Figma](https://www.figma.com/) or [Sketch](https://www.sketch.com/)
-- Building proof of concepts using HTML/CSS/JS or in [Webflow](https://webflow.com/)
-- Creating [Jamstack](https://jamstack.org/) websites from scratch
-- Working with [WordPress](https://wordpress.org/) or [Craft CMS](https://craftcms.com/) on more traditional server-side builds
-- Building modern SPAs or static sites with tools such as [Vue](https://vuejs.org/) or [Eleventy](https://www.11ty.dev/)
-- Crafting design systems in [Storybook](https://storybook.js.org/)
+- Wireframing and prototyping in [Figma](https://www.figma.com/) or [Sketch](https://www.sketch.com/).
+- Building proof of concepts using HTML/CSS/JS or in [Webflow](https://webflow.com/).
+- Creating [Jamstack](https://jamstack.org/) websites from scratch, using tools like [Eleventy](https://www.11ty.dev/), [Sanity](https://www.sanity.io/) & [Netlify](https://www.netlify.com/).
+- Working with [WordPress](https://wordpress.org/) or [Craft CMS](https://craftcms.com/) on more traditional server-side builds.
+- Building modern SPAs with [Vue](https://vuejs.org/).
+- Crafting design systems in [Storybook](https://storybook.js.org/).
 
 ## Who I like to work with
 

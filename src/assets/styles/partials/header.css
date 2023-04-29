@@ -2,6 +2,12 @@
   margin-bottom: var(--spacing);
 }
 
+.Header .Container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .Header__Site-Title {
   color: var(--color-alt);
   display: block;
@@ -60,22 +66,23 @@
   }
 
   @media (--mq-landscape-tablet-and-up) {
-    position: absolute;
-    top: 24px;
-    right: 24px;
-    width: 50%;
+    position: static;
+    width: auto;
+    height: auto;
     display: block;
-    transform: translateX(0);
+    transform: translate(0, 0);
     background-color: transparent;
     padding: 0;
-    height: auto;
 
     & ul {
       display: flex;
       justify-content: flex-end;
       align-items: center;
+      margin: 0;
+      padding: 0;
       & li {
-        margin-left: 16px;
+        margin: 0 0 0 16px;
+        padding: 0;
       }
     }
 

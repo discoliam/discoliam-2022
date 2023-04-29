@@ -71,37 +71,37 @@
   margin-bottom: var(--spacing);
 }
 
-.Projects__List {
+.Logo__List {
   list-style-type: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 var(--spacing) 0;
   display: flex;
   align-items: center;
   justify-items: center;
   flex-wrap: wrap;
 }
 
-.Projects__Item {
+.Logo__Item {
   padding: 0;
   margin: 0;
   flex: 0 0 50%;
-  padding: 0 calc(var(--gap) / 2);
+  padding: 0 calc(var(--gap));
   margin-bottom: var(--gap);
   & svg {
     width: 100%;
     height: auto;
-    max-width: 200px;
+    max-width: 180px;
   }
 }
 
 @media (--mq-tablet-and-up) {
-  .Projects__Item {
+  .Logo__Item {
     flex: 0 0 33.3%;
   }
 }
 
 @media (--mq-lap-and-up) {
-  .Projects__Item {
+  .Logo__Item {
     flex: 0 0 25%;
   }
 }
