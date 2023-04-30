@@ -3,7 +3,7 @@
 // Vars
 const body = document.querySelector('body'),
   siteNav = document.querySelector('.Header__Nav'),
-  menuButton = document.querySelector('.js-menu-toggle'),
+  menuButton = document.querySelector('.Header__NavToggle'),
   menuActive = 'open',
   menuUnactive = 'closed'
 
@@ -15,7 +15,6 @@ export function menuOpen() {
 }
 
 export function menuClose() {
-  // console.log('close')
   body.classList.remove('nav-open')
   siteNav.setAttribute('data-menu', menuUnactive)
   siteNav.removeAttribute('aria-expanded')

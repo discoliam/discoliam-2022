@@ -1,19 +1,20 @@
 .Header {
-  margin-bottom: var(--spacing);
+  margin-bottom: 70px;
 }
 
 .Header .Container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: var(--gap) 0;
 }
 
 .Header__Site-Title {
   color: var(--color-alt);
   display: block;
+  width: 100px;
   & svg {
-    width: 200px;
-    height: auto;
+    aspect-ratio: 1908/869;
   }
   &::after {
     display: none;
@@ -22,7 +23,7 @@
 
 /* Main Nav */
 .Header__Nav {
-  background-color: var(--main);
+  background-color: var(--color-main);
   position: fixed;
   top: 0;
   right: 0;
@@ -34,7 +35,7 @@
   z-index: 5;
   transform: translateX(100%);
   padding-top: 120px;
-  &.is-open {
+  &[data-menu='open'] {
     transform: translateX(0);
   }
 
@@ -55,10 +56,9 @@
     font-weight: 700;
     letter-spacing: 0.01em;
     display: block;
-    color: var(--color-alt);
-
+    color: var(--color-secondary);
     &:hover {
-      color: var(--color-secondary);
+      color: var(--color-alt);
     }
     &::after {
       display: none;
@@ -88,8 +88,9 @@
 
     & a {
       font-size: 14px;
+      color: var(--color-alt);
       &:hover {
-        color: var(--main);
+        color: var(--color-main);
       }
     }
   }
@@ -98,8 +99,7 @@
 /* Toggles */
 .Header__NavToggle,
 .Header__ThemeToggle {
-  position: absolute;
-  top: 24px;
+  display: block;
   cursor: pointer;
   border: 0;
 }
@@ -107,17 +107,66 @@
 /* Menu Toggle */
 .Header__NavToggle {
   z-index: 10;
-  right: 24px;
-  font-size: 14px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  color: var(--alt);
+  width: 40px;
+  height: 24px;
   background-color: transparent;
-  text-transform: uppercase;
-  font-family: var(--font-body);
   padding: 0;
   margin: 0;
-  @media (--mq-landscape-tablet-and-up) {
+  position: relative;
+
+  & b {
+    display: block;
+    width: 100%;
+    background-color: var(--color-alt);
+    border-radius: var(--border-radius);
+    height: 4px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all var(--global-transition);
+
+    &:nth-child(1) {
+      width: 35%;
+    }
+
+    &:nth-child(2) {
+      top: 10px;
+    }
+    &:nth-child(3) {
+      top: 20px;
+      width: 75%;
+    }
+  }
+}
+
+.Header__NavToggle[data-menu='open'] b {
+  &:nth-child(1) {
+    width: 100%;
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  &:nth-child(2) {
+    width: 0;
+    opacity: 0;
+  }
+  &:nth-child(3) {
+    width: 100%;
+    transform: rotate(-45deg);
+    top: 10px;
+  }
+}
+
+@media (--mq-landscape-tablet-and-up) {
+  .Header__Site-Title {
+    width: 200px;
+  }
+  .Header__NavToggle {
     display: none;
   }
+}
+
+body.nav-open {
+  overflow: hidden;
+  position: fixed;
 }
