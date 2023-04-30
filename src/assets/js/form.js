@@ -22,16 +22,19 @@ export default function () {
       body: new URLSearchParams(formData).toString(),
     })
       .then(showFormMessage(contactMessageSuccess))
-      .catch(showFormMessage(contactMessageError))
+      .catch((error) => showFormMessage(contactMessageError, error))
   }
 
   if (document.getElementById('ContactForm')) {
     form.addEventListener('submit', handleSubmit)
   }
 
-  const showFormMessage = (message) => {
+  const showFormMessage = (message, error) => {
     message.style.display = 'block'
     showMessageHideForm()
+    if (error) {
+      console.error(error)
+    }
   }
 
   const showMessageHideForm = () => {
