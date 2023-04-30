@@ -4,6 +4,28 @@
   grid-template-columns: 1fr;
 }
 
+.Contact__Message {
+  display: none;
+  opacity: 0;
+  transition: all var(--global-transition);
+  &.Contact__Message--active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.Contact__MessageText {
+  display: none;
+  padding: var(--gap);
+  background-color: var(--color-alt);
+  color: var(--color-light);
+  border-radius: var(--border-radius);
+}
+
+.Contact__MessageText--success {
+  background-color: var(--color-main);
+}
+
 .Contact__List {
   list-style-type: none;
   & li {
@@ -28,7 +50,8 @@
   justify-content: center;
   align-items: center;
   margin-right: 16px;
-  border-radius: 999em;
+  border-radius: 40px;
+  flex: 0 0 40px;
   & svg {
     width: 20px;
     height: 20px;

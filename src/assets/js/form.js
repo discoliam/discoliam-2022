@@ -2,6 +2,7 @@
 
 // Vars
 const form = document.getElementById('ContactForm')
+const contactMessage = document.querySelector('.Contact__Message')
 const contactMessageSuccess = document.querySelector(
   '.Contact__MessageText--success'
 )
@@ -10,21 +11,8 @@ const contactMessageError = document.querySelector(
 )
 
 export default function () {
-  // const handleSubmit = (e) => {
-  //   e.preventDefault()
-  //   let formData = new FormData(form)
-  //   fetch('/', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-  //     body: new URLSearchParams(formData).toString(),
-  //   })
-  //     .then(displaySuccessMessage())
-  //     .catch(displayerrorMessage())
-  // }
-
   const handleSubmit = (event) => {
     event.preventDefault()
-
     const myForm = event.target
     const formData = new FormData(myForm)
 
@@ -33,29 +21,21 @@ export default function () {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
     })
-      .then(displaySuccessMessage())
-      .catch(displayerrorMessage())
+      .then(showFormMessage(contactMessageSuccess))
+      .catch(showFormMessage(contactMessageError))
   }
 
   if (document.getElementById('ContactForm')) {
     form.addEventListener('submit', handleSubmit)
   }
 
-  const displaySuccessMessage = () => {
-    contactMessageSuccess.classList.add('Contact__MessageText--active')
-    const successTimeout = setTimeout(hideSuccessMessage, 5000)
-    function hideSuccessMessage() {
-      contactMessageSuccess.classList.remove('Contact__MessageText--active')
-      clearTimeout(successTimeout)
-    }
+  const showFormMessage = (message) => {
+    message.style.display = 'block'
+    showMessageHideForm()
   }
 
-  const displayerrorMessage = () => {
-    contactMessageSuccess.classList.add('Contact__MessageText--active')
-    const errorTimeout = setTimeout(hideerrorMessage, 5000)
-    function hideerrorMessage() {
-      contactMessageError.classList.remove('Contact__MessageText--active')
-      clearTimeout(errorTimeout)
-    }
+  const showMessageHideForm = () => {
+    contactMessage.classList.add('Contact__Message--active')
+    form.style.display = 'none'
   }
 }
