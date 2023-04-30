@@ -10,16 +10,31 @@ const contactMessageError = document.querySelector(
 )
 
 export default function () {
-  const handleSubmit = (e) => {
-    e.preventDefault()
-    let formData = new FormData(form)
+  // const handleSubmit = (e) => {
+  //   e.preventDefault()
+  //   let formData = new FormData(form)
+  //   fetch('/', {
+  //     method: 'POST',
+  //     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+  //     body: new URLSearchParams(formData).toString(),
+  //   })
+  //     .then(displaySuccessMessage())
+  //     .catch(displayerrorMessage())
+  // }
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    const myForm = event.target
+    const formData = new FormData(myForm)
+
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: new URLSearchParams(formData).toString(),
     })
       .then(displaySuccessMessage())
-      .catch(displayerrorMessage(error))
+      .catch(displayerrorMessage())
   }
 
   if (document.getElementById('ContactForm')) {
@@ -35,7 +50,7 @@ export default function () {
     }
   }
 
-  const displayerrorMessage = (error) => {
+  const displayerrorMessage = () => {
     contactMessageSuccess.classList.add('Contact__MessageText--active')
     const errorTimeout = setTimeout(hideerrorMessage, 5000)
     function hideerrorMessage() {
