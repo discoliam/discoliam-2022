@@ -9,7 +9,7 @@ eleventyNavigation:
   order: 1
 ---
 
-Originally designed and developed across the globe, this version was re-built September - December 2022 in Bristol UK, using a combination of blood, sweat, and [Stack Overflow](https://xkcd.com/979/).
+Originally designed and developed across the globe, this version was re-built September 2022 - April 2023 in Bristol UK, using a combination of blood, sweat, and [Stack Overflow](https://xkcd.com/979/).
 
 Typeset in [Merriweather](https://fonts.google.com/specimen/Merriweather) by [Sorkin Type](http://sorkintype.com), and [Lato](https://fonts.google.com/specimen/Lato) by [Łukasz Dziedzic](http://www.lukaszdziedzic.eu).
 
