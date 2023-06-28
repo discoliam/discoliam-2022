@@ -1,0 +1,58 @@
+---
+title: 'Music - Discoliam'
+description: 'My physical music collection, but digital?'
+layout: 'layouts/full-width.html'
+tags: header
+eleventyNavigation:
+  key: Music
+  order: 4
+---
+<div class='Container'>
+  <div class='Page__Header'>
+    <div>
+      <h1>Music</h1>
+      <p class='Lead'>
+        Heavily inspired by
+        <a href='https://andy-bell.co.uk/music-collection/' rel='nofollow' target='_blank'>Andys' page</a>, here's my
+        physical music collection. It's all powered by Discogs, so if you have something in my
+        <a href='https://www.discogs.com/wantlist?user=discoliam'>want list</a>
+        you're willing to part with, <a href='/contact'>let me know</a>!.
+      </p>
+    </div>
+  </div>
+  {% if music %}
+    <ul class='MusicList'>
+      {% for record in music | json %}
+        {% assign artists = record.basic_information.artists | map: 'name' %}
+        {% assign labels = record.basic_information.labels | map: 'name' %}
+        {% assign formats = record.basic_information.formats | map: 'name' %}
+
+        <li class='MusicList__Release' id='{{record.id}}'>
+          <div class='MusicList__ImgWrap'>
+            <img
+              class='MusicList__Image'
+              src='{{record.basic_information.cover_image}}'
+              alt='{{record.basic_information.title}}'
+            >
+            <div class='MusicList__Formats'>
+              {% for format in formats %}
+                <div class='Label'>{{ format }}</div>
+              {% endfor %}
+            </div>
+          </div>
+
+          <p>
+            <span class='MusicList__Title'>{{ record.basic_information.title }}</span>
+            <span class='MusicList__Artist'> {{ artists | join: ', ' -}}</span>
+            <small class='MusicList__Meta'>
+              {{- labels | join: ', ' -}}
+              - {{ record.basic_information.year -}}
+            </small>
+
+            <br>
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+</div>
