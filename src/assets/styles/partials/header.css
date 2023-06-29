@@ -97,7 +97,13 @@
 }
 
 .Header__Nav a[aria-current]:not([aria-current='false']) {
-  color: var(--color-main);
+  color: var(--color-alt);
+}
+
+@media (--mq-landscape-tablet-and-up) {
+  .Header__Nav a[aria-current]:not([aria-current='false']) {
+    color: var(--color-main);
+  }
 }
 
 /* Toggles */
