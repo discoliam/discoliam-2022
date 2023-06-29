@@ -96,6 +96,10 @@
   }
 }
 
+.Header__Nav a[aria-current]:not([aria-current='false']) {
+  color: var(--color-main);
+}
+
 /* Toggles */
 .Header__NavToggle,
 .Header__ThemeToggle {

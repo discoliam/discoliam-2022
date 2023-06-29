@@ -3,9 +3,13 @@ title: 'Music - Discoliam'
 description: 'My physical music collection, but digital?'
 layout: 'layouts/full-width.html'
 tags: header
+permalink: "music/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
 eleventyNavigation:
-  key: Music
+  key: Physical Music
   order: 4
+pagination:
+  data: music
+  size: 50
 ---
 <div class='Container'>
   <div class='Page__Header'>
@@ -15,24 +19,24 @@ eleventyNavigation:
         Heavily inspired by
         <a href='https://andy-bell.co.uk/music-collection/' rel='nofollow' target='_blank'>Andys' page</a>, here's my
         physical music collection. It's all powered by Discogs, so if you have something in my
-        <a href='https://www.discogs.com/wantlist?user=discoliam'>want list</a>
-        you're willing to part with, <a href='/contact'>let me know</a>!.
+        <a href='https://www.discogs.com/wantlist?user=discoliam'>wantlist</a>
+        you're willing to part with, <a href='/contact'>let me know</a>!
       </p>
     </div>
   </div>
   {% if music %}
     <ul class='MusicList'>
-      {% for record in music | json %}
+      {% for record in pagination.items %}
         {% assign artists = record.basic_information.artists | map: 'name' %}
         {% assign labels = record.basic_information.labels | map: 'name' %}
         {% assign formats = record.basic_information.formats | map: 'name' %}
 
-        <li class='MusicList__Release' id='{{record.id}}'>
+        <li class='MusicList__Release' id='{{ record.id }}'>
           <div class='MusicList__ImgWrap'>
             <img
               class='MusicList__Image'
-              src='{{record.basic_information.cover_image}}'
-              alt='{{record.basic_information.title}}'
+              src='{{ record.basic_information.cover_image }}'
+              alt='{{ record.basic_information.title }}'
             >
             <div class='MusicList__Formats'>
               {% for format in formats %}
@@ -54,5 +58,33 @@ eleventyNavigation:
         </li>
       {% endfor %}
     </ul>
+
+    <nav class='MusicNavigation' role='navigation' aria-label='Pagination Navigation'>
+      <ul class='MusicNavigation__List'>
+        {%- for pageEntry in pagination.pages %}
+          <li class='MusicNavigation__Item'>
+            {% if page.url == pagination.hrefs[forloop.index0] %}
+              <span
+                class='MusicNavigation__Current'
+                aria-current
+                aria-label='Current Page, Page {{ forloop.index -}}'
+              >
+                {{ forloop.index -}}
+              </span>
+            {% else %}
+              <a
+                class='MusicNavigation__Link'
+                href='{{ pagination.hrefs[ forloop.index0 ] }}'
+                aria-label='Page {{ forloop.index -}}'
+              >
+                {{ forloop.index -}}
+              </a>
+            {% endif %}
+          </li>
+        {%- endfor %}
+      </ul>
+    </nav>
+
+    <ol></ol>
   {% endif %}
 </div>

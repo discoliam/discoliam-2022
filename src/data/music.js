@@ -2,13 +2,10 @@ require('dotenv').config()
 
 const path = require('path')
 const axios = require('axios')
-const flatCache = require('flat-cache')
-
-const CACHE_KEY = 'releases'
-const CACHE_FOLDER = path.resolve('./.cache')
-const CACHE_FILE = 'releases.json'
+const { AssetCache } = require('@11ty/eleventy-fetch')
 
 let bigData = []
+let asset = new AssetCache('music')
 
 async function requestReleases(pageKey = 1) {
   let url = `https://api.discogs.com/users/discoliam/collection/folders/0/releases?token=${process.env.DISCOG_TOKEN}&page=${pageKey}&per_page=100&sort=artist`
@@ -18,7 +15,6 @@ async function requestReleases(pageKey = 1) {
 
     // let next = response.data.pagination.urls.next
     let totalPages = response.data.pagination.pages
-    let totalItems = response.data.pagination.items
     bigData.push(...response.data.releases)
 
     if (pageKey < totalPages) {
@@ -32,18 +28,15 @@ async function requestReleases(pageKey = 1) {
 }
 
 module.exports = async function () {
-  // load cache
-  const cache = flatCache.load(CACHE_FILE, CACHE_FOLDER)
-  const cachedItems = cache.getKey(CACHE_KEY)
-
-  // if we have a cache, return cached data
-  if (cachedItems) {
-    return cachedItems
+  // If saved in cache, return that instead of fetching all the data
+  if (asset.isCacheValid('8h')) {
+    console.log('Cached Version')
+    return asset.getCachedValue()
   }
 
   return await requestReleases().then(() => {
-    cache.setKey(CACHE_KEY, bigData)
-    cache.save()
+    console.log('API Version')
+    asset.save(bigData, 'json')
     return bigData
   })
 }
