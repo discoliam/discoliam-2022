@@ -1,0 +1,97 @@
+.MusicList {
+  list-style-type: none;
+  display: grid;
+  gap: var(--gap);
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  margin: 0;
+}
+
+.MusicNavigation {
+  display: block;
+}
+.MusicNavigation__List {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+.MusicNavigation__Item {
+  margin: 0;
+  padding: 0;
+}
+
+.MusicNavigation__Link {
+  padding: 0;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &::after {
+    display: none;
+  }
+  &:hover {
+    color: var(--color-alt);
+  }
+}
+
+.MusicNavigation [aria-current]:not([aria-current='false']) {
+  background-color: var(--color-secondary);
+  border-radius: 9999em;
+  font-weight: 700;
+  display: block;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (--mq-tablet-and-up) {
+  .MusicList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (--mq-lap-and-up) {
+  .MusicList {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.MusicList__ImgWrap {
+  position: relative;
+  display: block;
+}
+
+.MusicList__Formats {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.MusicList__Image {
+  width: 100%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.MusicList__Title {
+  font-weight: 700;
+  color: var(--color-main);
+}
+
+.MusicList__Title,
+.MusicList__Artist,
+.MusicList__Meta {
+  display: block;
+}
+
+.MusicList__Meta {
+  opacity: 0.8;
+}

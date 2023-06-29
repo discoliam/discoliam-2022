@@ -89,7 +89,8 @@ a {
   }
 
   &:focus {
-    text-decoration: underline;
+    text-decoration: none;
+    color: var(--color-main);
   }
 }
 
