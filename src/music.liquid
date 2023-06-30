@@ -24,32 +24,78 @@ pagination:
       </p>
     </div>
   </div>
+
+  {% if folders %}
+    <div class='MusicStats'>
+      <h2 class='MusicStats__Title h5'>By the numbers</h2>
+      <ul class='MusicStats__List'>
+        {% for folder in folders %}
+          {% unless folder.id == 1 %}
+            <li class='MusicStats__Item'>
+              <strong>{{ folder.name }}</strong>: {{ folder.count }}
+            </li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
   {% if music %}
     <ul class='MusicList'>
       {% for record in pagination.items %}
         {% assign artists = record.basic_information.artists | map: 'name' %}
         {% assign labels = record.basic_information.labels | map: 'name' %}
-        {% assign formats = record.basic_information.formats | map: 'name' %}
-
         <li class='MusicList__Release' id='{{ record.id }}'>
           <div class='MusicList__ImgWrap'>
             <img
               class='MusicList__Image'
               src='{{ record.basic_information.cover_image }}'
-              alt='{{ record.basic_information.title }}'
+              alt='{{ record.basic_information.title }} by {{ artists | join: ', ' -}}'
+              width='600'
+              height='600'
+              loading='lazy'
             >
             <div class='MusicList__Formats'>
-              {% for format in formats %}
-                <div class='Label'>{{ format }}</div>
-              {% endfor %}
+              {% comment %} 99.99% of the time, the first format is correct, and discogs tagging has to many. I only ever own one, so just pulling out the first here. Good enough for this list {% endcomment %}
+              <div class='Label'>
+                {% case record.folder_id %}
+                  {% when 4186546 %}
+                    10"
+                  {% when 4186540 %}
+                    12"
+                  {% when 4186549 %}
+                    5"
+                  {% when 4186543 %}
+                    7"
+                  {% when 4973741 %}
+                    CD
+                  {% when 4186564 %}
+                    Digital
+                  {% when 5866584 %}
+                    DVD
+                  {% when 4186567 %}
+                    Flexi
+                  {% else %}
+                    Uncatagorised
+                {% endcase %}
+              </div>
             </div>
           </div>
 
           <p>
             <span class='MusicList__Title'>{{ record.basic_information.title }}</span>
-            <span class='MusicList__Artist'> {{ artists | join: ', ' -}}</span>
+            {% comment %} Remove brackets form names that disccogs adds {% endcomment %}
+            <span class='MusicList__Artist'>
+              {% for artist in artists %}
+                {{ artist | removeBrackets -}}
+                {% if forloop.index < forloop.length %},&nbsp;{% endif %}
+              {% endfor %}
+            </span>
             <small class='MusicList__Meta'>
-              {{- labels | join: ', ' -}}
+              {% for label in labels %}
+                {{ label | removeBrackets -}}
+                {% if forloop.index < forloop.length %},&nbsp;{% endif %}
+              {% endfor %}
               - {{ record.basic_information.year -}}
             </small>
 

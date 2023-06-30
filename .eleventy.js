@@ -51,6 +51,10 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addLiquidShortcode('image', imageShortcode)
   eleventyConfig.addJavaScriptFunction('image', imageShortcode)
   eleventyConfig.addLiquidShortcode('year', () => `${new Date().getFullYear()}`)
+  eleventyConfig.addLiquidFilter('removeBrackets', (value) => {
+    let string = value.replace(/ *\([^)]*\) */g, '')
+    return string
+  })
   eleventyConfig.addPassthroughCopy({
     'src/assets/favicon': '/assets/favicon',
   })
