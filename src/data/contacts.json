@@ -40,5 +40,12 @@
     "target": "_blank",
     "rel": "me",
     "emoji": "🐘"
+  },
+  {
+    "name": "Threads",
+    "url": "https://www.threads.net/@discoliam",
+    "target": "_blank",
+    "rel": "me",
+    "emoji": "🧵"
   }
 ]
