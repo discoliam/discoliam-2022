@@ -43,6 +43,8 @@ For input, I'm using the combo of a [Logitech MX Master 3](https://www.logitech.
 
 My Desktop is a stupidly heavy bit of wood rescued from an office refurbishment job in Bristol. A friend saw a load of wood going in the bin, so just chucked it in his boot and gave me a call. For legs, I'm using [Flexispot EF1](https://flexispot.co.uk/electric-height-adjustable-standing-desk-e1.html) which I like, especially for the price.
 
+I'm using Full [Fully Jarvis Dual Monitor Arms](https://www.amazon.co.uk/Jarvis-Monitor-Mounting-Computer-Displays/dp/B071G47JJG), with a laptop stand on one of the arms. I was lucky enough to be given this by a friend, and don't think I'll go back now.
+
 To hide a few old drill holes I'm using a [Dotgrid Black deskmat](https://www.dotgrid.co/products/vegan-leather-desk-mat-black), mostly as it had a good review from [David Darnes](https://setups.co/posts/david-darnes).
 
 ## Audio
