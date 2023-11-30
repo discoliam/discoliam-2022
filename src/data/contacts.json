@@ -17,22 +17,10 @@
     "emoji": "📈"
   },
   {
-    "name": "Polywork",
-    "url": "https://www.polywork.com/discoliam",
-    "target": "_blank",
-    "emoji": "💼"
-  },
-  {
     "name": "Github",
     "url": "https://github.com/discoliam/",
     "target": "_blank",
     "emoji": "🗂"
-  },
-  {
-    "name": "CodePen",
-    "url": "https://codepen.io/discoliam/",
-    "target": "_blank",
-    "emoji": "👨‍💻"
   },
   {
     "name": "Mastodon",
@@ -40,12 +28,5 @@
     "target": "_blank",
     "rel": "me",
     "emoji": "🐘"
-  },
-  {
-    "name": "Threads",
-    "url": "https://www.threads.net/@discoliam",
-    "target": "_blank",
-    "rel": "me",
-    "emoji": "🧵"
   }
 ]

@@ -6,6 +6,7 @@ description: Case Study for Chalkboard
 year: 2020 - 2023
 website: https://usechalkboard.com/
 hero: './src/assets/images/bg-chalkboard.jpg'
+permalink: false
 eleventyNavigation:
   key: Chalkboard
   parent: Portfolio
