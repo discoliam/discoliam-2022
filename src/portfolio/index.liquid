@@ -19,7 +19,6 @@ eleventyNavigation:
       </p>
     </div>
   </div>
-
   <ul class='Portfolio__Nav PortfolioNav'>
     {% assign navPages = collections.all | eleventyNavigation: 'Portfolio' %}
     {%- for entry in navPages %}
@@ -28,11 +27,11 @@ eleventyNavigation:
         <div class='PortfolioNav__Image'>
           {% capture portfolioImage %}./src/assets/images/bg-{{entrySlug}}.jpg{% endcapture %}
           {% image portfolioImage, entry.title %}
-        </div>
-        <div class='PortfolioNav__Content'>
-          <h2 class='h3'>
+          <h2>
             {{ entry.title }}
           </h2>
+        </div>
+        <div class='PortfolioNav__Content'>
           <p class='PortfolioNav__Client'>
             <strong>Client:</strong> {{ entry.client -}}
             <br>
@@ -45,11 +44,12 @@ eleventyNavigation:
           </ul>
           {{ entry.excerpt }}
         </div>
-        {% comment %} <a class="Button PortfolioNav__Link" href="{{entry.url}}">View case study</a> {% endcomment %}
         {% if entry.website -%}
-          <a class='Button PortfolioNav__Link' href='{{entry.website}}' target='_blank' rel='noopener'
-            >View live site <span class='sr-only'> - Opens in new window</span></a
-          >
+          <a class='PortfolioNav__Link' href='{{entry.website}}' target='_blank' rel='noopener'>
+            View live site
+            <span class='sr-only'> - Opens in new window</span>
+            {% svg "external" %}
+          </a>
         {%- endif %}
       </li>
     {% endfor %}

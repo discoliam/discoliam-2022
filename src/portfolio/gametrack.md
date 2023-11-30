@@ -6,6 +6,7 @@ description: Case Study for GameTrack
 year: 2022
 website: https://gametrack.app/
 hero: './src/assets/images/bg-otaku-development.jpg'
+permalink: false
 eleventyNavigation:
   key: GameTrack
   parent: Portfolio

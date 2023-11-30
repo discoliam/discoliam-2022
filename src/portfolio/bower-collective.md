@@ -6,6 +6,7 @@ description: Case Study forBower Collective
 year: 2022
 website: https://www.bowercollective.com
 hero: './src/assets/images/bg-bower-collective.jpg'
+permalink: false
 eleventyNavigation:
   key: Bower Collective
   parent: Portfolio

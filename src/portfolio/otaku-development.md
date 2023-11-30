@@ -6,6 +6,7 @@ description: Case Study for Otaku Development
 year: 2022
 website: https://otaku-dev.co.uk
 hero: './src/assets/images/bg-otaku-development.jpg'
+permalink: false
 eleventyNavigation:
   key: Otaku Development
   parent: Portfolio

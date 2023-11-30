@@ -8,7 +8,7 @@
 
   & img {
     position: relative;
-    z-index: 5;
+    z-index: 4;
   }
 
   &::before,
@@ -30,5 +30,24 @@
     transform: rotate(-8deg) translate(-3%, 3%);
     background-color: var(--color-secondary);
     z-index: 3;
+  }
+}
+
+.AboutGrid {
+  padding-bottom: var(--gap);
+}
+@media (--mq-tablet-and-up) {
+  .AboutGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--gap);
+  }
+
+  .AboutCol--left {
+    position: relative;
+  }
+  .About__ImageWrapper {
+    position: sticky;
+    top: var(--gap);
   }
 }
