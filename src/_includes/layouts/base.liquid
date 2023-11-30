@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>
+      {% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}
+    </title>
+    <meta
+      name='description'
+      content='{% if description %}{{- description -}}{% else %}{{ site.description }}{% endif %}'
+    >
+    <meta name='generator' content='{{ eleventy.generator }}'>
+
+    <link rel='preload' href='/assets/style.css' as='style'>
+    <link rel='stylesheet' href='/assets/style.css'>
+
+    <link rel='apple-touch-icon' sizes='180x180' href='/assets/favicon/apple-touch-icon.png'>
+    <link rel='icon' type='image/png' sizes='32x32' href='/assets/favicon/favicon-32x32.png'>
+    <link rel='icon' type='image/png' sizes='16x16' href='/assets/favicon/favicon-16x16.png'>
+    <link rel='manifest' href='/assets/favicon/site.webmanifest'>
+
+    <meta property='og:title' content='{{site.title}}'>
+    <meta property='og:site_name' content='{{site.title}}'>
+    <meta property='og:url' content='https://discoliam.com/'>
+    <meta property='og:description' content='{{site.description}}'>
+    <meta property='og:type' content='website'>
+    <meta property='og:image' content='https://discoliam.com/assets/icons/favicon/og.png'>
+
+    <meta name='twitter:site' content='@discoliam'>
+    <meta name='twitter:title' content='{{site.title}}'>
+    <meta name='twitter:description' content='{{site.description}}'>
+    <meta name='twitter:image' content='https://discoliam.com/assets/icons/favicon/og.png'>
+
+    <meta name='theme-color' content='#fffbe9'>
+    <meta name='msapplication-TileColor' content='#255B59'>
+  </head>
+  <body>
+    <a href='#main-content' class='Button sr-only'>Skip to main content</a>
+    {% svgsprite %}
+    {% include 'header.liquid' %}
+    {% block content %}
+    {% endblock %}
+    {% include 'footer.liquid' %}
+    <script src='/assets/main.js'></script>
+    <script src='https://unpkg.com/website-carbon-badges@1.1.3/b.min.js' async defer></script>
+  </body>
+</html>

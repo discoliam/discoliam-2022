@@ -1,7 +1,5 @@
 const path = require('path')
-const TerserPlugin = require('terser-webpack-plugin')
 const PostCSSPresetEnv = require('postcss-preset-env')
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const isDev = process.env.NODE_ENV !== 'production'
