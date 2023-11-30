@@ -28,6 +28,9 @@
 @import 'pages/contact.css';
 @import 'pages/centered.css';
 
+/* Vendor */
+@import '../../../node_modules/dracula-prism/dist/css/dracula-prism.css';
+
 /* Diff Highlighting */
 .token.deleted {
   background-color: rgba(255, 85, 85, 50%);
