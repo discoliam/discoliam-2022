@@ -1,4 +1,5 @@
 const Image = require('@11ty/eleventy-img')
+const { DateTime } = require('luxon')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const svgSprite = require('eleventy-plugin-svg-sprite')
@@ -55,6 +56,23 @@ module.exports = (eleventyConfig) => {
     let string = value.replace(/ *\([^)]*\) */g, '')
     return string
   })
+
+  eleventyConfig.addFilter('readableDate', (dateObj, format, zone) => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: zone || 'utc',
+      locale: 'en-gb',
+    }).toFormat(format || 'dd LLLL yyyy')
+  })
+  {
+    locale: 'fr'
+  }
+  eleventyConfig.addLiquidFilter('htmlDateString', (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {
+      zone: 'utc',
+      locale: 'en-gb',
+    }).toFormat('yyyy-LL-dd')
+  })
+
   eleventyConfig.addPassthroughCopy({
     'src/assets/favicon': '/assets/favicon',
   })

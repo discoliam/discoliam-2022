@@ -1,0 +1,33 @@
+---
+title: Blog | Discoliam
+pageTitle: Blog
+description: Insights, thoughts, geneneral irevoery
+layout: 'layouts/full-width.html'
+tags: header
+eleventyNavigation:
+  key: Blog
+  order: 3
+---
+<div class='Container'>
+  <div class='Page__Header'>
+    <div>
+      <h1>{{ pageTitle }}</h1>
+      <p class='Lead'>Thoughts about the internet.</p>
+    </div>
+  </div>
+  {% assign postslist = collections.posts | reverse %}
+  <ol reversed class='PostList'>
+    {% for post in postslist %}
+      <li class='PostList__Item'>
+        <h2 class='h3'>
+          <a href='{{ post.url }}' class='postlist-link'>
+            {{- post.data.title -}}
+          </a>
+        </h2>
+        <time class='PostList__Date' datetime='{{ post.date | htmlDateString }}'>
+          {{- post.date | readableDate: 'dd MMMM y' -}}
+        </time>
+      </li>
+    {% endfor %}
+  </ol>
+</div>
