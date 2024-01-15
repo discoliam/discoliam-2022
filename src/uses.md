@@ -4,9 +4,6 @@ title: Uses | Discoliam
 pageTitle: /uses
 description: What to know what I use to make stuff? Well then...
 tags: header
-eleventyNavigation:
-  key: /uses
-  order: 5
 ---
 
 <p class="Lead">Inspired by <a href="https://wesbos.com/uses/" target="_blank">Wes Bos</a> (as I found his resource very useful) this is a quick rundown of the things I use day to day for work / general messing around.</p>
