@@ -13,7 +13,7 @@ eleventyNavigation:
   order: 50
   client: Oku Studio
   services: 'Full Stack Development'
-  tags: ['WordPress', 'Gutenberg', 'ACF', 'CSS', 'JS']
+  tags: ['WordPress', 'Gutenberg', 'ACF', 'CSS', 'JS', 'A11y']
   excerpt: <p>Working with Oku Studio, we developed a new site Bristol Good Food 2030. The site supports their mission to help make Bristol’s food system better for communities, climate and nature. We developed clean, useable interfaces for the wealth of information available, as well as meeting high accessibility standards, meeting their message is available to as many people as possible.</p>
   website: https://bristolgoodfood.org/
 ---

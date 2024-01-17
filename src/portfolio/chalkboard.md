@@ -14,6 +14,6 @@ eleventyNavigation:
   client: Chalkboard
   services: 'Full Stack Development'
   tags: ['Craft CMS', 'Tailwind CSS', 'Alpine JS']
-  excerpt: <p>I've been working with Chalkboard for nearly a year to bring a vast array of improvements across the depth and breadth of their website. This includes new features, site-wide changes and generating thousands of landing pages for their targeted and organic marketing.</p>
+  excerpt: <p>I've been working with Chalkboard for nearly a year to bring a vast array of improvements across the depth and breadth of their <a href="https://www.craftcms.com/">Craft CMS</a> based website. This includes new features, site-wide changes and generating thousands of landing pages for their targeted and organic marketing.</p>
   website: https://usechalkboard.com/
 ---

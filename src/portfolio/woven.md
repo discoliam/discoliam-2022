@@ -14,6 +14,6 @@ eleventyNavigation:
   client: Oku Studio
   services: 'Full Stack Development'
   tags: ['WordPress', 'Gutenberg', 'Lottie', 'Barba.JS', 'CSS', 'JS']
-  excerpt: <p>I helped Oku Studio develop Wovens' brand-new branding and logo into a complementary website and user experience. Using smooth scrolling, page transitions subtle animations to highlight Woven's creative energy and passion for video production.</p>
+  excerpt: <p>I helped Oku Studio develop Wovens' new branding and logo into a complementary website and user experience. The addition of smooth scrolling from <a href="https://locomotivemtl.github.io/locomotive-scroll/">Locomotiv Scroll</a> and page transitions via <a href="https://barba.js.org/">Barba.js</a> makes this WordPress based site feel closer to an SPA and highlights Woven's creative energy and passion for video production.</p>
   website: https://wovenfilms.co.uk/
 ---
