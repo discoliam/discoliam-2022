@@ -1,4 +1,4 @@
-# Discoliam 2022
+# Discoliam 2024
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/5a9f23c5-b054-416f-9631-b2a28c9c55b0/deploy-status)](https://app.netlify.com/sites/discoliam-2022/deploys)
 
@@ -14,7 +14,7 @@ The website for [Discoliam.com](https://discoliam.com/).
 ## 📝 Colophon
 
 - [11ty](https://www.11ty.dev/) as a Static Site Generator
-- [Nunjucks](https://mozilla.github.io/nunjucks/) for templating.
+- [Liquid](https://liquidjs.com/) for templating.
 - [Webpack](https://webpack.js.org/)
 - [PostCSS](https://postcss.org/)
 - [postcss-preset-env](https://preset-env.cssdb.org/)
