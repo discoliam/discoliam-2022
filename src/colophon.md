@@ -30,4 +30,3 @@ I don't normally keep older versions of my website. But, I've manged to save a f
 - [2020](https://2020.discoliam.com/)
 - [2018](https://2018.discoliam.com/)
 - [2016](https://2016.discoliam.com/)
-- [2014](https://2014.discoliam.com/)
