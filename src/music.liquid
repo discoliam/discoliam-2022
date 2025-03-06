@@ -4,9 +4,6 @@ description: 'My physical music collection, but digital?'
 layout: 'layouts/full-width.html'
 tags: header
 permalink: "music/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
-eleventyNavigation:
-  key: Physical Music
-  order: 4
 pagination:
   data: music
   size: 50
