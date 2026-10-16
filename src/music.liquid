@@ -1,0 +1,133 @@
+---
+title: 'Music - Discoliam'
+description: 'My physical music collection, but digital?'
+layout: 'layouts/full-width.html'
+tags: header
+permalink: "music/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber | plus: 1 }}/{% endif %}index.html"
+pagination:
+  data: music
+  size: 50
+---
+<div class='Container'>
+  <div class='Page__Header'>
+    <div>
+      <h1>Music</h1>
+      <p class='Lead'>
+        Heavily inspired by
+        <a href='https://andy-bell.co.uk/music-collection/' rel='nofollow' target='_blank'>Andys' page</a>, here's my
+        physical music collection. It's all powered by Discogs, so if you have something in my
+        <a href='https://www.discogs.com/wantlist?user=discoliam'>wantlist</a>
+        you're willing to part with, <a href='/contact'>let me know</a>!
+      </p>
+    </div>
+  </div>
+
+  {% if folders %}
+    <div class='MusicStats'>
+      <h2 class='MusicStats__Title h5'>By the numbers</h2>
+      <ul class='MusicStats__List'>
+        {% for folder in folders %}
+          {% unless folder.id == 1 %}
+            <li class='MusicStats__Item'>
+              <strong>{{ folder.name }}</strong>: {{ folder.count }}
+            </li>
+          {% endunless %}
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  {% if music %}
+    <ul class='MusicList'>
+      {% for record in pagination.items %}
+        {% assign artists = record.basic_information.artists | map: 'name' %}
+        {% assign labels = record.basic_information.labels | map: 'name' %}
+        <li class='MusicList__Release' id='{{ record.id }}'>
+          <div class='MusicList__ImgWrap'>
+            <img
+              class='MusicList__Image'
+              src='{{ record.basic_information.cover_image }}'
+              alt='{{ record.basic_information.title }} by {{ artists | join: ', ' -}}'
+              width='600'
+              height='600'
+              loading='lazy'
+            >
+            <div class='MusicList__Formats'>
+              {% comment %} 99.99% of the time, the first format is correct, and discogs tagging has to many. I only ever own one, so just pulling out the first here. Good enough for this list {% endcomment %}
+              <div class='Label'>
+                {% case record.folder_id %}
+                  {% when 4186546 %}
+                    10"
+                  {% when 4186540 %}
+                    12"
+                  {% when 4186549 %}
+                    5"
+                  {% when 4186543 %}
+                    7"
+                  {% when 4973741 %}
+                    CD
+                  {% when 4186564 %}
+                    Digital
+                  {% when 5866584 %}
+                    DVD
+                  {% when 4186567 %}
+                    Flexi
+                  {% else %}
+                    Uncatagorised
+                {% endcase %}
+              </div>
+            </div>
+          </div>
+
+          <p>
+            <span class='MusicList__Title'>{{ record.basic_information.title }}</span>
+            {% comment %} Remove brackets form names that disccogs adds {% endcomment %}
+            <span class='MusicList__Artist'>
+              {% for artist in artists %}
+                {{ artist | removeBrackets -}}
+                {% if forloop.index < forloop.length %},&nbsp;{% endif %}
+              {% endfor %}
+            </span>
+            <small class='MusicList__Meta'>
+              {% for label in labels %}
+                {{ label | removeBrackets -}}
+                {% if forloop.index < forloop.length %},&nbsp;{% endif %}
+              {% endfor %}
+              - {{ record.basic_information.year -}}
+            </small>
+
+            <br>
+          </p>
+        </li>
+      {% endfor %}
+    </ul>
+
+    <nav class='MusicNavigation' role='navigation' aria-label='Pagination Navigation'>
+      <ul class='MusicNavigation__List'>
+        {%- for pageEntry in pagination.pages %}
+          <li class='MusicNavigation__Item'>
+            {% if page.url == pagination.hrefs[forloop.index0] %}
+              <span
+                class='MusicNavigation__Current'
+                aria-current
+                aria-label='Current Page, Page {{ forloop.index -}}'
+              >
+                {{ forloop.index -}}
+              </span>
+            {% else %}
+              <a
+                class='MusicNavigation__Link'
+                href='{{ pagination.hrefs[ forloop.index0 ] }}'
+                aria-label='Page {{ forloop.index -}}'
+              >
+                {{ forloop.index -}}
+              </a>
+            {% endif %}
+          </li>
+        {%- endfor %}
+      </ul>
+    </nav>
+
+    <ol></ol>
+  {% endif %}
+</div>

@@ -1,0 +1,20 @@
+/* base settings */
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-family-body);
+  background-color: var(--color-light);
+  color: var(--color-dark);
+  margin: 0;
+  font-weight: 300;
+}

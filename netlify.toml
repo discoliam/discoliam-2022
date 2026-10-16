@@ -1,0 +1,5 @@
+# Archived site: keep it out of search engines
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
